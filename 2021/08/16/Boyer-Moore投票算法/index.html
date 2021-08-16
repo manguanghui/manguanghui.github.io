@@ -20,26 +20,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"manguanghui.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="主要涉猎MySQL、Golang等">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陌年的博客">
-<meta property="og:url" content="https://manguanghui.github.io/index.html">
+<meta name="description" content="Boyer-Moore投票算法又名摩尔算法 算法介绍基本思想在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。  如果数组为空，则数组中不存在主要元素； 如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。  算法步骤 维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boyer-Moore投票算法">
+<meta property="og:url" content="https://manguanghui.github.io/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="陌年的博客">
-<meta property="og:description" content="主要涉猎MySQL、Golang等">
+<meta property="og:description" content="Boyer-Moore投票算法又名摩尔算法 算法介绍基本思想在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。  如果数组为空，则数组中不存在主要元素； 如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。  算法步骤 维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，c">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-16T06:37:49.000Z">
+<meta property="article:modified_time" content="2021-08-16T06:47:12.277Z">
 <meta property="article:author" content="mgh">
-<meta property="article:tag" content="Golang, MySQL">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="go">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://manguanghui.github.io/">
+<link rel="canonical" href="https://manguanghui.github.io/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://manguanghui.github.io/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/","path":"2021/08/16/Boyer-Moore投票算法/","title":"Boyer-Moore投票算法"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>陌年的博客</title>
+<title>Boyer-Moore投票算法 | 陌年的博客</title>
   
 
 
@@ -133,7 +136,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -146,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Boyer-Moore投票算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">2.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">算法步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.3.</span> <span class="nav-text">题目</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,16 +212,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://manguanghui.github.io/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -230,9 +235,9 @@
       <meta itemprop="name" content="陌年的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Boyer-Moore投票算法</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Boyer-Moore投票算法
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -280,7 +285,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Boyer-Moore投票算法"><a href="#Boyer-Moore投票算法" class="headerlink" title="Boyer-Moore投票算法"></a><strong>Boyer-Moore投票算法</strong></h1><p>又名摩尔算法</p>
+        <h1 id="Boyer-Moore投票算法"><a href="#Boyer-Moore投票算法" class="headerlink" title="Boyer-Moore投票算法"></a><strong>Boyer-Moore投票算法</strong></h1><p>又名摩尔算法</p>
 <h1 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。</p>
 <ul>
 <li>如果数组为空，则数组中不存在主要元素；</li>
@@ -313,7 +318,6 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种算法，时间复杂度为O(n),空间复杂度要高一点,为O(n)</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MajorityElement</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	m := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">	lenth := <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		m[v] += <span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> m[v] &gt; lenth/<span class="number">2</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> v</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种算法</span></span><br><span class="line"><span class="comment">// 时间复杂度为O(n)。n为数组nums的长度，需要遍历数组两次。</span></span><br><span class="line"><span class="comment">// 空间复杂度为O(1)。只需要常数的额外空间。</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MajorityElementTwo</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 首先维护一个候选主要元素</span></span><br><span class="line">	candidate := <span class="number">-1</span></span><br><span class="line">	<span class="comment">// 记录候选元素的个数</span></span><br><span class="line">	count := <span class="number">0</span></span><br><span class="line">	<span class="comment">// 如果count=0,此时没有候选主要元素,将此时遍历到的元素赋给candidate作为候选主要元素</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		<span class="keyword">if</span> count == <span class="number">0</span> &#123;</span><br><span class="line">			candidate = v</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 如果遍历到的元素和候选主要元素相等，则数量加一,反之数量减一</span></span><br><span class="line">		<span class="keyword">if</span> v == candidate &#123;</span><br><span class="line">			count++</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			count--</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 进行第二次遍历，确定第一次遍历得到的candidate是否时主要元素</span></span><br><span class="line">	count = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		<span class="keyword">if</span> v == candidate &#123;</span><br><span class="line">			count++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> count*<span class="number">2</span> &gt; <span class="built_in">len</span>(nums) &#123;</span><br><span class="line">		<span class="keyword">return</span> candidate</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
@@ -321,11 +325,17 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/go/" rel="tag"># go</a>
+          </div>
+
+        
+
     </footer>
   </article>
 </div>
+
 
 
 
