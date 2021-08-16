@@ -243,7 +243,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-16 14:37:49 / 修改时间：14:47:12" itemprop="dateCreated datePublished" datetime="2021-08-16T14:37:49+08:00">2021-08-16</time>
+      <time title="创建时间：2021-08-16 14:37:49 / 修改时间：14:49:08" itemprop="dateCreated datePublished" datetime="2021-08-16T14:37:49+08:00">2021-08-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,33 +286,14 @@
 <li>如果数组为空，则数组中不存在主要元素；</li>
 <li>如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。</li>
 </ul>
-<h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><ol>
-<li><p>维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，count=0；</p>
-</li>
-<li><p>遍历数组 <em>nums</em> 中的所有元素，遍历到元素 <em>x</em> 时，进行如下操作：</p>
-<p>1）如果 count=0，则将 x 的值赋给 candidate，否则不更新 candidate 的值；</p>
-<p>2）如果 x=candidate，则将 count 加 1，否则将 count 减 1。</p>
-</li>
-<li><p>遍历结束之后，如果数组 nums 中存在主要元素，则 candidate 即为主要元素，否则 candidate 可能为数组中的任意一个元素。</p>
-</li>
-</ol>
-<p>由于不一定存在主要元素，因此需要第二次遍历数组，验证 candidate 是否为主要元素。第二次遍历时，统计 candidate 在数组中的出现次数，如果出现次数大于数组长度的一半，则 candidate 是主要元素，返回 candidate，否则数组中不存在主要元素，返回 −1。</p>
-<p><strong>为什么当数组中存在主要元素时，Boyer-Moore 投票算法可以确保得到主要元素？</strong></p>
-<p>在 Boyer-Moore 投票算法中，遇到相同的数则将 count 加 1，遇到不同的数则将 count 减 1.根据主要元素的定义，主要元素的出现次数大于其他元素的出现之和，因此在遍历过程中，主要元素和其他元素两两抵消，最后一定剩下至少一个主要元素，此时 candidate 为主要元素，且 count &gt;= 1。</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>数组中占比超过一半的元素称之为主要元素。给你一个 整数 数组，找出其中的主要元素。若没有，返回 -1 。请设计时间复杂度为 O(N) 、空间复杂度为 O(1) 的解决方案。</p>
-<p>示例 1：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[1,2,5,9,5,9,5,5,5]</span><br><span class="line">输出：5</span><br></pre></td></tr></table></figure>
-
-<p>示例 2：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[3,2]</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
-
-<p>示例 3：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[2,2,1,1,1,2,2]</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure>
-
-<p>代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种算法，时间复杂度为O(n),空间复杂度要高一点,为O(n)</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MajorityElement</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	m := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">	lenth := <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		m[v] += <span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> m[v] &gt; lenth/<span class="number">2</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> v</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种算法</span></span><br><span class="line"><span class="comment">// 时间复杂度为O(n)。n为数组nums的长度，需要遍历数组两次。</span></span><br><span class="line"><span class="comment">// 空间复杂度为O(1)。只需要常数的额外空间。</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MajorityElementTwo</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 首先维护一个候选主要元素</span></span><br><span class="line">	candidate := <span class="number">-1</span></span><br><span class="line">	<span class="comment">// 记录候选元素的个数</span></span><br><span class="line">	count := <span class="number">0</span></span><br><span class="line">	<span class="comment">// 如果count=0,此时没有候选主要元素,将此时遍历到的元素赋给candidate作为候选主要元素</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		<span class="keyword">if</span> count == <span class="number">0</span> &#123;</span><br><span class="line">			candidate = v</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 如果遍历到的元素和候选主要元素相等，则数量加一,反之数量减一</span></span><br><span class="line">		<span class="keyword">if</span> v == candidate &#123;</span><br><span class="line">			count++</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			count--</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 进行第二次遍历，确定第一次遍历得到的candidate是否时主要元素</span></span><br><span class="line">	count = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> nums &#123;</span><br><span class="line">		<span class="keyword">if</span> v == candidate &#123;</span><br><span class="line">			count++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> count*<span class="number">2</span> &gt; <span class="built_in">len</span>(nums) &#123;</span><br><span class="line">		<span class="keyword">return</span> candidate</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

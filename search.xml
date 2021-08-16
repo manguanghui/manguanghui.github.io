@@ -9,6 +9,8 @@
 <li>如果数组为空，则数组中不存在主要元素；</li>
 <li>如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。</li>
 </ul>
+<span id="more"></span>
+
 <h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><ol>
 <li><p>维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，count=0；</p>
 </li>
