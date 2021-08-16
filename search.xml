@@ -4,13 +4,13 @@
     <title>Boyer-Moore投票算法</title>
     <url>/2021/08/16/Boyer-Moore%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Boyer-Moore投票算法"><a href="#Boyer-Moore投票算法" class="headerlink" title="Boyer-Moore投票算法"></a><strong>Boyer-Moore投票算法</strong></h1><p>又名摩尔算法</p>
+<span id="more"></span>
+
 <h1 id="算法介绍"><a href="#算法介绍" class="headerlink" title="算法介绍"></a>算法介绍</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。</p>
 <ul>
 <li>如果数组为空，则数组中不存在主要元素；</li>
 <li>如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。</li>
 </ul>
-<span id="more"></span>
-
 <h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><ol>
 <li><p>维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，count=0；</p>
 </li>
