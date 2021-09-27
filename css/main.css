@@ -2909,6 +2909,17 @@ mark.search-keyword {
     margin-top: 8px;
   }
 }
+.header-inner {
+  opacity: 0.85;
+}
+.sidebar {
+  transition-duration: 0.4s;
+  opacity: 0.85;
+}
+.content {
+  padding-top: 15px;
+  opacity: 0.9;
+}
 .post-block,
 .comments {
   padding: 40px;
