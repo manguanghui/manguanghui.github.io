@@ -2955,3 +2955,16 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
+body {
+  background: url("/images/300.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  color: var(--text-color);
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 1em;
+  line-height: 2;
+  min-height: 100%;
+  position: relative;
+  transition: padding 0.2s ease-in-out;
+}
