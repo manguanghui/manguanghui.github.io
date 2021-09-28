@@ -1207,7 +1207,7 @@ pre code {
 }
 .site-title {
   font-family: Birthstone, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1.375em;
+  font-size: 2em;
   font-weight: normal;
   margin: 0;
 }
@@ -2955,6 +2955,9 @@ mark.search-keyword {
   .comments {
     padding: 10px 12px;
   }
+}
+.sidebar-inner {
+  background: rgba(255,255,255,0.75) none repeat scroll !important;
 }
 body {
   background: url("/images/300.jpg");
