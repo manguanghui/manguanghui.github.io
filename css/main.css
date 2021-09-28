@@ -2959,6 +2959,9 @@ mark.search-keyword {
 .sidebar-inner {
   background: rgba(255,255,255,0.75) none repeat scroll !important;
 }
+.header-inner {
+  background: rgba(255,255,255,0.75) none repeat scroll !important;
+}
 body {
   background: url("/images/300.jpg");
   background-repeat: repeat;
