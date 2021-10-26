@@ -53,7 +53,7 @@ for $inject_style in hexo-config('injects.style')
 
 
 body {
-  background: url(/images/300.jpg);
+  background: url(/images/300.jpeg);
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
