@@ -46,4 +46,32 @@
         <tag>go</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Centos安装RabbitMQ</title>
+    <url>/2021/12/20/Centos%E5%AE%89%E8%A3%85RabbitMQ/</url>
+    <content><![CDATA[<h1 id="Centos安装RabbitMQ"><a href="#Centos安装RabbitMQ" class="headerlink" title="Centos安装RabbitMQ"></a>Centos安装RabbitMQ</h1><h2 id="安装所需依赖"><a href="#安装所需依赖" class="headerlink" title="安装所需依赖"></a>安装所需依赖</h2><p>1、在线安装</p>
+<p>yum install -y gcc gcc-c++ unixODBC-devel  openssl-devel ncurses-devel</p>
+<p>2、离线安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yumdownler --resolve --destdir=`<span class="built_in">pwd</span>`  gcc gcc-c++ unixODBC-devel  openssl-devel ncurses-devel</span><br></pre></td></tr></table></figure>
+
+<p>获取依赖的 rpm 文件，此时都放到当前目录下</p>
+<p>因为可能不知道依赖包安装顺序，所以使用以下命令来进行安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -Uvh *.rpm --nodeps --force <span class="comment"># 安装当前目录下的所有rpm文件，要在root用户下</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装erlang"><a href="#安装erlang" class="headerlink" title="安装erlang"></a>安装erlang</h2><p>– erlang download url [<a href="https://erlang.org/download/]">https://erlang.org/download/]</a> [<a href="https://github.com/erlang/otp/releases]">https://github.com/erlang/otp/releases]</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://erlang.org/download/otp_src_24.0.tar.gz</span><br><span class="line">tar xf otp_src_24.0.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># --prefix 跟erlang编译目录</span></span><br><span class="line">./configure --prefix=erlang/otc_src_24.0 --with-ssl --enable-hipe --enable-threads --enable-smp-support --enable-kernel-poll  --without-javac</span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="comment"># 配置环境变量</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"><span class="comment"># 添加如下代码</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin/:<span class="variable">$PATH</span>:<span class="string">&#x27;erlang编译之后的目录&#x27;</span>:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">source</span> /etc/profile <span class="comment"># 更新配置</span></span><br><span class="line">erl -version <span class="comment"># 查看erlang版本</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装RabbitMQ"><a href="#安装RabbitMQ" class="headerlink" title="安装RabbitMQ"></a>安装RabbitMQ</h2><p>– rabbitmq download url [<a href="https://github.com/rabbitmq/rabbitmq-server/releases]">https://github.com/rabbitmq/rabbitmq-server/releases]</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.7/rabbitmq-server-generic-unix-3.9.7.tar.xz</span><br><span class="line">tar -xvf rabbitmq-server-generic-unix-3.9.7.tar.xz -C /root/data/</span><br><span class="line">vim /etc/profile</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/root/data/rabbitmq_server-3.9.7/sbin</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /root/data/rabbitmq_server-3.9.7/sbin</span><br><span class="line"><span class="comment"># console</span></span><br><span class="line">./rabbitmq-server start</span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">./rabbitmq-server -detached</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">./rabbitmq-server stop</span><br><span class="line"><span class="comment"># 启动Web管理插件</span></span><br><span class="line">./rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_management</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动节点</span></span><br><span class="line">./rabbitmqctl start_app</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加账号密码和权限</span></span><br><span class="line">./rabbitmqctl add_user admin admin</span><br><span class="line">./rabbitmqctl set_user_tags admin administrator</span><br><span class="line">./rabbitmqctl add_vhost admin</span><br><span class="line">./rabbitmqctl set_permissions -p admin admin <span class="string">&quot;.&quot;</span> <span class="string">&quot;.&quot;</span> <span class="string">&quot;.*&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启防火墙端口</span></span><br><span class="line"><span class="comment"># 默认服务端口</span></span><br><span class="line">firewall-cmd --zone=public --add-port=5672/tcp --permanent</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认管理界面端口</span></span><br><span class="line">firewall-cmd --zone=public --add-port=15672/tcp --permanent</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启防火墙</span></span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h1 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h1><p>ip:15672</p>
+]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
 </search>
