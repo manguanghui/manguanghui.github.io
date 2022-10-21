@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://manguanghui.github.io</id>
+    <title>MoNian&apos;s Blog</title>
+    <updated>2022-10-21T02:10:58.425Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://manguanghui.github.io"/>
+    <link rel="self" href="https://manguanghui.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://manguanghui.github.io/images/avatar.png</logo>
+    <icon>https://manguanghui.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, MoNian&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[检测U盘]]></title>
+        <id>https://manguanghui.github.io/post/jian-ce-u-pan/</id>
+        <link href="https://manguanghui.github.io/post/jian-ce-u-pan/">
+        </link>
+        <updated>2022-10-14T08:50:34.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[go 统计目录大小]]></title>
+        <id>https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/</id>
+        <link href="https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/">
+        </link>
+        <updated>2022-10-14T08:17:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hyper-V端口保留]]></title>
+        <id>https://manguanghui.github.io/post/hyper-v-duan-kou-bao-liu/</id>
+        <link href="https://manguanghui.github.io/post/hyper-v-duan-kou-bao-liu/">
+        </link>
+        <updated>2022-10-10T06:47:54.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Centos安装RabbitMQ]]></title>
+        <id>https://manguanghui.github.io/post/centos-an-zhuang-rabbitmq/</id>
+        <link href="https://manguanghui.github.io/post/centos-an-zhuang-rabbitmq/">
+        </link>
+        <updated>2022-10-08T08:39:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Boyer-Moore投票算法]]></title>
+        <id>https://manguanghui.github.io/post/boyer-moore-tou-piao-suan-fa/</id>
+        <link href="https://manguanghui.github.io/post/boyer-moore-tou-piao-suan-fa/">
+        </link>
+        <updated>2022-10-08T08:32:56.000Z</updated>
+    </entry>
+</feed>

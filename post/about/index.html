@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="MoNian的技术博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#212529">
+<title>关于 | MoNian&#39;s Blog</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1666318256647">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+    <meta name="description" content="关于" />
+    <meta name="keywords" content="" />
+    <!--网站加载进度条开始-->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #006eff;
+        /*进度条颜色*/
+        height: 3px;
+        /*进度条高度*/
+    }
+
+    .pace .pace-progress-inner {
+        box-shadow: 0 0 10px #3f3f3f, 0 0 5px #3f3f3f;
+        /*阴影颜色*/
+    }
+
+    .pace .pace-activity {
+        border-top-color: #00ffdd;
+        /*上边框颜色*/
+        border-left-color: #00ffdd;
+        /*左边框颜色*/
+    }
+</style>
+<!--网站加载进度条结束-->
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>MoNian&#39;s Blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+      <div
+        class="section-layout pisces ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">MoNian</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">主要涉及MySQL、Centos、Go</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://manguanghui.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+            <div class="section-box box-shadow-wrapper">
+              <div class="section bg-color post post-page">
+                <div class="post-body">
+                  
+                    
+                </div>
+                <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://manguanghui.github.io/post/about/">
+      关于
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2019-01-25</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>70<span class="pc-show">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/about/" data-flag-title="关于" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span>浏览量：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+                  <div class="post-body next-md-body" id="post_body">
+                    <blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<p>主要用来记录一些平时遇到的问题和难点的解决方法</p>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<p>一个浪迹于编程圈子的菜鸟</p>
+<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<p>游戏、音乐</p>
+<h2 id="联系我呀">📬 联系我呀</h2>
+
+                      <div>
+                        <br />
+                        <div style="text-align:center;color: #999;font-size:14px;">---------- 本文到此结束 <i
+                            class="fa fa-paw"></i>
+                          感谢您的阅读 ----------</div>
+                        <br />
+                      </div>
+                  </div>
+                  <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      MoNian
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://manguanghui.github.io/post/about/" title="关于">https://manguanghui.github.io/post/about/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+    </div>
+  </div>
+</div>
+                    
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'QsOsloz7AM7s5MoNwXgk1Wfx-gzGzoHsz',
+    appKey: 'CuHQDTT4g1KSM76yt1Eny4SO',
+    avatar: 'monsterid',
+    placeholder: '欢迎评论',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <!-- <div class="copyright">
+      Powered by <a href="https://github.com/manguanghui" target="_blank">Github</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">MoNian</a>
+    </div> -->
+    <div class="poweredby">
+      Powered by <a href="https://github.com/manguanghui" target="_blank">MoNian</a>
+    </div>
+    <!-- <center id="runTimeBox">
+      网站已安全运行： <span id="run_time"></span>
+    </center>
+    <i class="fa fa-eye"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv"></span>
+      次</span>
+    <span class="post-meta-divider">|</span>
+    <i class="fa fa-users"></i><span id="busuanzi_container_site_uv">总访客数： <span id="busuanzi_value_site_uv"></span>
+      人</span> -->
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent">
+              <span id="back_to_top_text">0</span>%
+            </span>
+            
+        </div>
+        
+          <div class="bg-img">
+            <img
+              src="/media/images/background.jpg" />
+          </div>
+          
+            
+                  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  // BirthDay = new Date('');
+  // if (BirthDay.getTime()) {
+  //   function runTime() {
+  //     str = "";
+  //     today = new Date();
+  //     timeold = today.getTime() - BirthDay.getTime();
+  //     sectimeold = timeold / 1000
+  //     secondsold = Math.floor(sectimeold);
+  //     msPerDay = 24 * 60 * 60 * 1000
+  //     msPerYear = 365 * 24 * 60 * 60 * 1000
+  //     e_daysold = timeold / msPerDay % 365
+  //     e_yearsold = timeold / msPerYear
+  //     daysold = Math.floor(e_daysold);
+  //     yearsold = Math.floor(e_yearsold);
+  //     str = yearsold + " 年 ";
+  //     str += daysold + " 天 ";
+  //     str += today.getHours() + " 时 ";
+  //     str += today.getMinutes() + " 分 ";
+  //     str += today.getSeconds() + " 秒";
+  //     return str;
+  //   }
+  //   setInterval(function () {
+  //     $("#run_time").html(runTime());
+  //   }, 1000);
+  // } else {
+  //   document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+  // }
+
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+        <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
+  <!-- 复制弹窗提示开始 -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  window.onload = function(){
+    document.body.oncopy = function() {
+      swal({
+        title: "复制成功！",
+        text: "若要转载请务必保留原文链接并注明来源，谢谢合作！",
+        icon: "success",
+        buttons: false,
+        closeOnClickOutside: false,
+        timer: 3000,
+     });
+    };
+  }
+</script>
+<!-- 复制弹窗提示结束 -->
+
+  <!--浏览进度条开始-->
+
+<style>
+    .read_progress {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #eee;
+    }
+    .read_progress_inner {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: #00D3B2;
+    }
+</style>
+
+<div class="read_progress">
+    <div class="read_progress_inner" id="read_progress_inner"></div>
+</div>
+
+<script>
+document.addEventListener('scroll', function(e) {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 已经读过被卷起来的文档部分
+    var scrollHeight = document.documentElement.scrollHeight // 文档总高度
+    var clientHeight = document.documentElement.clientHeight // 窗口可视高度
+    document.getElementById('read_progress_inner').style.width = +(scrollTop/(scrollHeight-clientHeight)).toFixed(2)*100 + '%'
+})
+</script>
+
+<!--浏览进度条结束-->
+
+</body>
+<input hidden id="copy" />
+<script>
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+</script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500
+  });
+</script>
+
+<!-- <div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/jian-ce-u-pan/"" data-c="
+          &lt;h3 id=&#34;根据注册表去检测&#34;&gt;根据注册表去检测&lt;/h3&gt;
+&lt;p&gt;相关代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// 获取系统中所有盘符
+func GetSystemDisks() []string {
+	// 获取系统dll
+	kernel32 := syscall.MustLoadDLL(&amp;quot;kernel32.dll&amp;quot;)
+	// 获取dll中函数
+	GetLogicalDrives := kernel32.MustFindProc(&amp;quot;GetLogicalDrives&amp;quot;)
+	// 调用dll中函数
+	n, _, _ := GetLogicalDrives.Call()
+	s := strconv.FormatInt(int64(n), 2)
+	var allDrives = []string{&amp;quot;A:&amp;quot;, &amp;quot;B:&amp;quot;, &amp;quot;C:&amp;quot;, &amp;quot;D:&amp;quot;, &amp;quot;E:&amp;quot;, &amp;quot;F:&amp;quot;, &amp;quot;G:&amp;quot;, &amp;quot;H:&amp;quot;,
+		&amp;quot;I:&amp;quot;, &amp;quot;J:&amp;quot;, &amp;quot;K:&amp;quot;, &amp;quot;L:&amp;quot;, &amp;quot;M:&amp;quot;, &amp;quot;N:&amp;quot;, &amp;quot;O:&amp;quot;, &amp;quot;P：&amp;quot;, &amp;quot;Q：&amp;quot;, &amp;quot;R：&amp;quot;, &amp;quot;S：&amp;quot;, &amp;quot;T：&amp;quot;,
+		&amp;quot;U：&amp;quot;, &amp;quot;V：&amp;quot;, &amp;quot;W：&amp;quot;, &amp;quot;X：&amp;quot;, &amp;quot;Y：&amp;quot;, &amp;quot;Z：&amp;quot;}
+	temp := allDrives[0:len(s)]
+	var d []string
+	for i, v := range s {
+		if v == 49 {
+			l := len(s) - i - 1
+			d = append(d, temp[l])
+		}
+	}
+	var drives []string
+	for i, v := range d {
+		drives = append(drives[i:], append([]string{v}, drives[:i]...)...)
+	}
+	return drives
+}
+
+// 获取插入的U盘盘符
+func GetUDisk() []string {
+	//查询注册表，判断是否插入U盘
+	k, err := registry.OpenKey(registry.LOCAL_MACHINE, `SYSTEM\CurrentControlSet\Services\USBSTOR\Enum`, registry.QUERY_VALUE)
+	if err != nil {
+		fmt.Println(&amp;quot;Not have U-Disk&amp;quot;)
+		return nil
+	}
+	defer k.Close()
+	// 获取注册表中值，得到插入了几个U盘
+	count, _, err := k.GetIntegerValue(&amp;quot;Count&amp;quot;)
+	// 获取全部盘符
+	disks := GetSystemDisks()
+
+	return disks[len(disks)-int(count):]
+}
+&lt;/code&gt;&lt;/pre&gt;
+">检测U盘</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/"" data-c="
+          &lt;p&gt;&lt;strong&gt;go 里面并没有直接去统计目录大小的方法，只统计文件信息的方法&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文件大小获取&#34;&gt;文件大小获取&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// 这里获取的是 FileInfo 对象
+fi, _ := os.Stat(filepath)
+
+// FileInfo 定义如下：
+type FileInfo interface {
+    Name() string       // 文件的名字
+    Size() int64        // 普通文件返回值表示其大小；其他文件的返回值含义各系统不同
+    Mode() FileMode     // 文件的模式位
+    ModTime() time.Time // 文件的修改时间
+    IsDir() bool        // 等价于Mode().IsDir()
+    Sys() interface{}   // 底层数据来源（可以返回nil）
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;标准库提供了 filepath.Walk 遍历目录，但是这个函数是串行的，当目录比较多时，性能很差，&lt;br&gt;
+这里建议自己实现，大致步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;读取给定目录下所有文件及目录；&lt;/li&gt;
+&lt;li&gt;遍历读取结果，如果是目录，创建协程重复 1；&lt;/li&gt;
+&lt;li&gt;如果是文件，获取大小，保存到 channel 中；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;细节&#34;&gt;细节&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;用 channel 控制最大协程数量；&lt;/li&gt;
+&lt;li&gt;WaitGroup 控制并发；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+    &amp;quot;flag&amp;quot;
+    &amp;quot;fmt&amp;quot;
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;os&amp;quot;
+    &amp;quot;path/filepath&amp;quot;
+    &amp;quot;sync&amp;quot;
+    &amp;quot;time&amp;quot;
+)
+
+// 获取目录dir下的文件大小
+func walkDir(dir string, wg *sync.WaitGroup, fileSizes chan&amp;lt;- int64) {
+    defer wg.Done()
+    for _, entry := range dirents(dir) {
+        if entry.IsDir() {//目录
+            wg.Add(1)
+            subDir := filepath.Join(dir, entry.Name())
+            go walkDir(subDir, wg, fileSizes)
+        } else {
+            fileSizes &amp;lt;- entry.Size()
+        }
+    }
+}
+
+// sema is a counting semaphore for limiting concurrency in dirents
+var sema = make(chan struct{}, 20)
+
+// 读取目录dir下的文件信息
+func dirents(dir string) []os.FileInfo {
+    sema &amp;lt;- struct{}{}
+    defer func() { &amp;lt;-sema }()
+    entries, err := ioutil.ReadDir(dir)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, &amp;quot;du: %v\n&amp;quot;, err)
+        return nil
+    }
+    return entries
+}
+
+// 输出文件数量的大小
+func printDiskUsage(nfiles, nbytes int64) {
+    fmt.Printf(&amp;quot;%d files %.1f GB\n&amp;quot;, nfiles, float64(nbytes)/1e9)
+}
+
+// 提供-v 参数会显示程序进度信息
+var verbose = flag.Bool(&amp;quot;v&amp;quot;, false, &amp;quot;show verbose progress messages&amp;quot;)
+
+func Start() {
+    flag.Parse()
+    roots := flag.Args() // 需要统计的目录
+    if len(roots) == 0 {
+        roots = []string{&amp;quot;.&amp;quot;}
+    }
+    fileSizes := make(chan int64)
+    var wg sync.WaitGroup
+    for _, root := range roots {
+        wg.Add(1)
+        go walkDir(root, &amp;amp;wg, fileSizes)
+    }
+    go func() {
+        wg.Wait()  // 等待goroutine结束
+        close(fileSizes)
+    }()
+    var tick &amp;lt;-chan time.Time
+    if *verbose {
+        tick = time.Tick(100 * time.Millisecond)  // 输出时间间隔
+    }
+    var nfiles, nbytes int64
+loop:
+    for {
+        select {
+        case size, ok := &amp;lt;-fileSizes:
+            if !ok {
+                break loop
+            }
+            nfiles++
+            nbytes += size
+        case &amp;lt;-tick:
+            printDiskUsage(nfiles, nbytes)
+        }
+    }
+    printDiskUsage(nfiles, nbytes)
+}
+&lt;/code&gt;&lt;/pre&gt;
+">go 统计目录大小</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/hyper-v-duan-kou-bao-liu/"" data-c="
+          &lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
+&lt;p&gt;软件无法启动，执行 &lt;code&gt;netstat -aon|findstr &amp;quot;被占用端口号&amp;quot;&lt;/code&gt; 后发现端口并没有被占用&lt;/p&gt;
+&lt;p&gt;这是因为一些软件的原因，可能会导致Hyper-V服务将某些端口保留，经过Hyper-V服务保留的端口是无法让软件进行使用的。&lt;/p&gt;
+&lt;p&gt;这时，我们就需要去修改Hyper-V服务保留的端口&lt;/p&gt;
+&lt;h3 id=&#34;解决办法&#34;&gt;解决办法：&lt;/h3&gt;
+&lt;p&gt;重新设置一些【TCP动态端口范围】，让Hyper-V服务只在我们指定的端口范围内进行保留。&lt;br&gt;
+使用命令 &lt;code&gt;netsh int ipv4 show dynamicport tcp&lt;/code&gt; 可以查看目前【TCP 动态端口】的范围&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://manguanghui.github.io/post-images/1665384718738.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;执行下面的命令，可以根据自己需求来设置端口范围&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh int ipv4 set dynamic tcp start=49152 num=16384&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;netsh int ipv6 set dynamic tcp start=49152 num=16384&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;执行完成之后，重启电脑&lt;/p&gt;
+&lt;p&gt;之后，Hyper-V服务就只会在我们设置好的端口范围内进行端口保留。&lt;/p&gt;
+">Hyper-V端口保留</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/centos-an-zhuang-rabbitmq/"" data-c="
+          &lt;h3 id=&#34;安装所需依赖&#34;&gt;安装所需依赖&lt;/h3&gt;
+&lt;p&gt;1、在线安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;yum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2、离线安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;yumdownler --resolve --destdir=pwd gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;获取依赖的 rpm 文件，此时都放到当前目录下&lt;/p&gt;
+&lt;p&gt;因为可能不知道依赖包安装顺序，所以使用以下命令来进行安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;rpm -Uvh *.rpm --nodeps --force # 安装当前目录下的所有rpm文件，要在root用户下
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装erlang&#34;&gt;安装erlang&lt;/h3&gt;
+&lt;p&gt;– erlang download url &lt;a href=&#34;https://erlang.org/download/&#34;&gt; https://erlang.org/download/ &lt;/a&gt; | &lt;a href=&#34;https://github.com/erlang/otp/releases&#34;&gt; https://github.com/erlang/otp/releases &lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;wget https://erlang.org/download/otp_src_24.0.tar.gz
+tar xf otp_src_24.0.tar.gz
+
+# --prefix 跟erlang编译目录
+./configure --prefix=erlang/otc_src_24.0 --with-ssl --enable-hipe --enable-threads --enable-smp-support --enable-kernel-poll --without-javac
+# 编译
+make &amp;amp;&amp;amp; make install
+# 配置环境变量
+vim /etc/profile
+# 添加如下代码
+export PATH=PATH:&#39;erlang编译之后的目录&#39;:$PATH
+source /etc/profile # 更新配置
+erl -version # 查看erlang版本
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装rabbitmq&#34;&gt;安装RabbitMQ&lt;/h3&gt;
+&lt;p&gt;– rabbitmq download url &lt;a href=&#34;https://github.com/rabbitmq/rabbitmq-server/releases&#34;&gt;https://github.com/rabbitmq/rabbitmq-server/releases&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.7/rabbitmq-server-generic-unix-3.9.7.tar.xz
+tar -xvf rabbitmq-server-generic-unix-3.9.7.tar.xz -C /root/data/
+vim /etc/profile
+export PATH=$PATH:/root/data/rabbitmq_server-3.9.7/sbin
+source /etc/profile
+
+cd /root/data/rabbitmq_server-3.9.7/sbin
+# console
+./rabbitmq-server start
+# 后台启动
+./rabbitmq-server -detached
+# 关闭
+./rabbitmq-server stop
+# 启动Web管理插件
+./rabbitmq-plugins enable rabbitmq_management
+
+# 启动节点
+./rabbitmqctl start_app
+
+# 添加账号密码和权限
+./rabbitmqctl add_user admin admin
+./rabbitmqctl set_user_tags admin administrator
+./rabbitmqctl add_vhost admin
+./rabbitmqctl set_permissions -p admin admin &amp;quot;.&amp;quot; &amp;quot;.&amp;quot; &amp;quot;.*&amp;quot;
+
+# 开启防火墙端口
+# 默认服务端口
+firewall-cmd --zone=public --add-port=5672/tcp --permanent
+
+# 默认管理界面端口
+firewall-cmd --zone=public --add-port=15672/tcp --permanent
+
+# 重启防火墙
+firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;访问&#34;&gt;访问&lt;/h3&gt;
+&lt;p&gt;ip:15672&lt;/p&gt;
+">Centos安装RabbitMQ</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/boyer-moore-tou-piao-suan-fa/"" data-c="
+          &lt;p&gt;又名摩尔算法&lt;/p&gt;
+&lt;h1 id=&#34;算法介绍&#34;&gt;算法介绍&lt;/h1&gt;
+&lt;h2 id=&#34;基本思想&#34;&gt;基本思想&lt;/h2&gt;
+&lt;p&gt;在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果数组为空，则数组中不存在主要元素；&lt;/li&gt;
+&lt;li&gt;如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;算法步骤&#34;&gt;算法步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，count=0；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遍历数组 &lt;em&gt;nums&lt;/em&gt; 中的所有元素，遍历到元素 &lt;em&gt;x&lt;/em&gt; 时，进行如下操作：&lt;/p&gt;
+&lt;p&gt;1）如果 count=0，则将 x 的值赋给 candidate，否则不更新 candidate 的值；&lt;/p&gt;
+&lt;p&gt;2）如果 x=candidate，则将 count 加 1，否则将 count 减 1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遍历结束之后，如果数组 nums 中存在主要元素，则 candidate 即为主要元素，否则 candidate 可能为数组中的任意一个元素。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于不一定存在主要元素，因此需要第二次遍历数组，验证 candidate 是否为主要元素。第二次遍历时，统计 candidate 在数组中的出现次数，如果出现次数大于数组长度的一半，则 candidate 是主要元素，返回 candidate，否则数组中不存在主要元素，返回 −1。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么当数组中存在主要元素时，Boyer-Moore 投票算法可以确保得到主要元素？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 Boyer-Moore 投票算法中，遇到相同的数则将 count 加 1，遇到不同的数则将 count 减 1.根据主要元素的定义，主要元素的出现次数大于其他元素的出现之和，因此在遍历过程中，主要元素和其他元素两两抵消，最后一定剩下至少一个主要元素，此时 candidate 为主要元素，且 count &amp;gt;= 1。&lt;/p&gt;
+&lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
+&lt;p&gt;数组中占比超过一半的元素称之为主要元素。给你一个 整数 数组，找出其中的主要元素。若没有，返回 -1 。请设计时间复杂度为 O(N) 、空间复杂度为 O(1) 的解决方案。&lt;/p&gt;
+&lt;p&gt;示例 1：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;输入：[1,2,5,9,5,9,5,5,5]  
+输出：5  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 2：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;输入：[3,2]  
+输出：-1  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 3：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;输入：[2,2,1,1,1,2,2]  
+输出：2  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// 第一种算法，时间复杂度为O(n),空间复杂度要高一点,为O(n)  
+func MajorityElement(nums []int) int {  
+	m := make(map[int]int)  
+	lenth := len(nums)  
+	for _, v := range nums {  
+		m[v] += 1  
+		if m[v] &amp;gt; lenth/2 {  
+			return v  
+		}  
+	}  
+	return -1  
+}  
+  
+// 第二种算法  
+// 时间复杂度为O(n)。n为数组nums的长度，需要遍历数组两次。  
+// 空间复杂度为O(1)。只需要常数的额外空间。  
+func MajorityElementTwo(nums []int) int {  
+	// 首先维护一个候选主要元素  
+	candidate := -1  
+	// 记录候选元素的个数  
+	count := 0  
+	// 如果count=0,此时没有候选主要元素,将此时遍历到的元素赋给candidate作为候选主要元素  
+	for _, v := range nums {  
+		if count == 0 {  
+			candidate = v  
+		}  
+		// 如果遍历到的元素和候选主要元素相等，则数量加一,反之数量减一  
+		if v == candidate {  
+			count++  
+		} else {  
+			count--  
+		}  
+	}  
+	// 进行第二次遍历，确定第一次遍历得到的candidate是否时主要元素  
+	count = 0  
+	for _, v := range nums {  
+		if v == candidate {  
+			count++  
+		}  
+	}  
+	if count*2 &amp;gt; len(nums) {  
+		return candidate  
+	}  
+	return -1  
+}
+&lt;/code&gt;&lt;/pre&gt;
+">Boyer-Moore投票算法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://manguanghui.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;主要用来记录一些平时遇到的问题和难点的解决方法&lt;/p&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;一个浪迹于编程圈子的菜鸟&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;p&gt;游戏、音乐&lt;/p&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "[{&#34;content&#34;:&#34;&lt;h3 id=\&#34;根据注册表去检测\&#34;&gt;根据注册表去检测&lt;/h3&gt;\n&lt;p&gt;相关代码如下&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-go\&#34;&gt;// 获取系统中所有盘符\nfunc GetSystemDisks() []string {\n\t// 获取系统dll\n\tkernel32 := syscall.MustLoadDLL(&amp;quot;kernel32.dll&amp;quot;)\n\t// 获取dll中函数\n\tGetLogicalDrives := kernel32.MustFindProc(&amp;quot;GetLogicalDrives&amp;quot;)\n\t// 调用dll中函数\n\tn, _, _ := GetLogicalDrives.Call()\n\ts := strconv.FormatInt(int64(n), 2)\n\tvar allDrives = []string{&amp;quot;A:&amp;quot;, &amp;quot;B:&amp;quot;, &amp;quot;C:&amp;quot;, &amp;quot;D:&amp;quot;, &amp;quot;E:&amp;quot;, &amp;quot;F:&amp;quot;, &amp;quot;G:&amp;quot;, &amp;quot;H:&amp;quot;,\n\t\t&amp;quot;I:&amp;quot;, &amp;quot;J:&amp;quot;, &amp;quot;K:&amp;quot;, &amp;quot;L:&amp;quot;, &amp;quot;M:&amp;quot;, &amp;quot;N:&amp;quot;, &amp;quot;O:&amp;quot;, &amp;quot;P：&amp;quot;, &amp;quot;Q：&amp;quot;, &amp;quot;R：&amp;quot;, &amp;quot;S：&amp;quot;, &amp;quot;T：&amp;quot;,\n\t\t&amp;quot;U：&amp;quot;, &amp;quot;V：&amp;quot;, &amp;quot;W：&amp;quot;, &amp;quot;X：&amp;quot;, &amp;quot;Y：&amp;quot;, &amp;quot;Z：&amp;quot;}\n\ttemp := allDrives[0:len(s)]\n\tvar d []string\n\tfor i, v := range s {\n\t\tif v == 49 {\n\t\t\tl := len(s) - i - 1\n\t\t\td = append(d, temp[l])\n\t\t}\n\t}\n\tvar drives []string\n\tfor i, v := range d {\n\t\tdrives = append(drives[i:], append([]string{v}, drives[:i]...)...)\n\t}\n\treturn drives\n}\n\n// 获取插入的U盘盘符\nfunc GetUDisk() []string {\n\t//查询注册表，判断是否插入U盘\n\tk, err := registry.OpenKey(registry.LOCAL_MACHINE, `SYSTEM\\CurrentControlSet\\Services\\USBSTOR\\Enum`, registry.QUERY_VALUE)\n\tif err != nil {\n\t\tfmt.Println(&amp;quot;Not have U-Disk&amp;quot;)\n\t\treturn nil\n\t}\n\tdefer k.Close()\n\t// 获取注册表中值，得到插入了几个U盘\n\tcount, _, err := k.GetIntegerValue(&amp;quot;Count&amp;quot;)\n\t// 获取全部盘符\n\tdisks := GetSystemDisks()\n\n\treturn disks[len(disks)-int(count):]\n}\n&lt;/code&gt;&lt;/pre&gt;\n&#34;,&#34;fileName&#34;:&#34;jian-ce-u-pan&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;检测U盘&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;tools&#34;,&#34;slug&#34;:&#34;9NHbeb4m1&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/9NHbeb4m1/&#34;},{&#34;name&#34;:&#34;go&#34;,&#34;slug&#34;:&#34;S34G0DvPG&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/S34G0DvPG/&#34;}],&#34;date&#34;:&#34;2022-10-14 16:50:34&#34;,&#34;dateFormat&#34;:&#34;2022-10-14&#34;,&#34;feature&#34;:&#34;https://manguanghui.github.io/post-images/jian-ce-u-pan.jpg&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/jian-ce-u-pan/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:93000,&#34;words&#34;:285,&#34;minutes&#34;:2},&#34;description&#34;:&#34;根据注册表去检测\n相关代码如下\n// 获取系统中所有盘符\nfunc GetSystemDisks() []string {\n\t// 获取系统dll\n\tkernel32 := syscall.MustLoadDLL(&amp;quot;kernel3...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%A0%B9%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8E%BB%E6%A3%80%E6%B5%8B\&#34;&gt;根据注册表去检测&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;&lt;strong&gt;go 里面并没有直接去统计目录大小的方法，只统计文件信息的方法&lt;/strong&gt;&lt;/p&gt;\n&lt;h3 id=\&#34;文件大小获取\&#34;&gt;文件大小获取&lt;/h3&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-go\&#34;&gt;// 这里获取的是 FileInfo 对象\nfi, _ := os.Stat(filepath)\n\n// FileInfo 定义如下：\ntype FileInfo interface {\n    Name() string       // 文件的名字\n    Size() int64        // 普通文件返回值表示其大小；其他文件的返回值含义各系统不同\n    Mode() FileMode     // 文件的模式位\n    ModTime() time.Time // 文件的修改时间\n    IsDir() bool        // 等价于Mode().IsDir()\n    Sys() interface{}   // 底层数据来源（可以返回nil）\n}\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;标准库提供了 filepath.Walk 遍历目录，但是这个函数是串行的，当目录比较多时，性能很差，&lt;br&gt;\n这里建议自己实现，大致步骤如下：&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;读取给定目录下所有文件及目录；&lt;/li&gt;\n&lt;li&gt;遍历读取结果，如果是目录，创建协程重复 1；&lt;/li&gt;\n&lt;li&gt;如果是文件，获取大小，保存到 channel 中；&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h3 id=\&#34;细节\&#34;&gt;细节&lt;/h3&gt;\n&lt;ol&gt;\n&lt;li&gt;用 channel 控制最大协程数量；&lt;/li&gt;\n&lt;li&gt;WaitGroup 控制并发；&lt;/li&gt;\n&lt;/ol&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-go\&#34;&gt;import (\n    &amp;quot;flag&amp;quot;\n    &amp;quot;fmt&amp;quot;\n    &amp;quot;io/ioutil&amp;quot;\n    &amp;quot;os&amp;quot;\n    &amp;quot;path/filepath&amp;quot;\n    &amp;quot;sync&amp;quot;\n    &amp;quot;time&amp;quot;\n)\n\n// 获取目录dir下的文件大小\nfunc walkDir(dir string, wg *sync.WaitGroup, fileSizes chan&amp;lt;- int64) {\n    defer wg.Done()\n    for _, entry := range dirents(dir) {\n        if entry.IsDir() {//目录\n            wg.Add(1)\n            subDir := filepath.Join(dir, entry.Name())\n            go walkDir(subDir, wg, fileSizes)\n        } else {\n            fileSizes &amp;lt;- entry.Size()\n        }\n    }\n}\n\n// sema is a counting semaphore for limiting concurrency in dirents\nvar sema = make(chan struct{}, 20)\n\n// 读取目录dir下的文件信息\nfunc dirents(dir string) []os.FileInfo {\n    sema &amp;lt;- struct{}{}\n    defer func() { &amp;lt;-sema }()\n    entries, err := ioutil.ReadDir(dir)\n    if err != nil {\n        fmt.Fprintf(os.Stderr, &amp;quot;du: %v\\n&amp;quot;, err)\n        return nil\n    }\n    return entries\n}\n\n// 输出文件数量的大小\nfunc printDiskUsage(nfiles, nbytes int64) {\n    fmt.Printf(&amp;quot;%d files %.1f GB\\n&amp;quot;, nfiles, float64(nbytes)/1e9)\n}\n\n// 提供-v 参数会显示程序进度信息\nvar verbose = flag.Bool(&amp;quot;v&amp;quot;, false, &amp;quot;show verbose progress messages&amp;quot;)\n\nfunc Start() {\n    flag.Parse()\n    roots := flag.Args() // 需要统计的目录\n    if len(roots) == 0 {\n        roots = []string{&amp;quot;.&amp;quot;}\n    }\n    fileSizes := make(chan int64)\n    var wg sync.WaitGroup\n    for _, root := range roots {\n        wg.Add(1)\n        go walkDir(root, &amp;amp;wg, fileSizes)\n    }\n    go func() {\n        wg.Wait()  // 等待goroutine结束\n        close(fileSizes)\n    }()\n    var tick &amp;lt;-chan time.Time\n    if *verbose {\n        tick = time.Tick(100 * time.Millisecond)  // 输出时间间隔\n    }\n    var nfiles, nbytes int64\nloop:\n    for {\n        select {\n        case size, ok := &amp;lt;-fileSizes:\n            if !ok {\n                break loop\n            }\n            nfiles++\n            nbytes += size\n        case &amp;lt;-tick:\n            printDiskUsage(nfiles, nbytes)\n        }\n    }\n    printDiskUsage(nfiles, nbytes)\n}\n&lt;/code&gt;&lt;/pre&gt;\n&#34;,&#34;fileName&#34;:&#34;go-tong-ji-mu-lu-da-xiao&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;go 统计目录大小&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;tools&#34;,&#34;slug&#34;:&#34;9NHbeb4m1&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/9NHbeb4m1/&#34;},{&#34;name&#34;:&#34;go&#34;,&#34;slug&#34;:&#34;S34G0DvPG&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/S34G0DvPG/&#34;}],&#34;date&#34;:&#34;2022-10-14 16:17:07&#34;,&#34;dateFormat&#34;:&#34;2022-10-14&#34;,&#34;feature&#34;:&#34;https://manguanghui.github.io/post-images/go-tong-ji-mu-lu-da-xiao.png&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;3 min read&#34;,&#34;time&#34;:155000,&#34;words&#34;:539,&#34;minutes&#34;:3},&#34;description&#34;:&#34;go 里面并没有直接去统计目录大小的方法，只统计文件信息的方法\n文件大小获取\n// 这里获取的是 FileInfo 对象\nfi, _ := os.Stat(filepath)\n\n// FileInfo 定义如下：\ntype FileInfo...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E8%8E%B7%E5%8F%96\&#34;&gt;文件大小获取&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%BB%86%E8%8A%82\&#34;&gt;细节&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;h3 id=\&#34;原因\&#34;&gt;原因&lt;/h3&gt;\n&lt;p&gt;软件无法启动，执行 &lt;code&gt;netstat -aon|findstr &amp;quot;被占用端口号&amp;quot;&lt;/code&gt; 后发现端口并没有被占用&lt;/p&gt;\n&lt;p&gt;这是因为一些软件的原因，可能会导致Hyper-V服务将某些端口保留，经过Hyper-V服务保留的端口是无法让软件进行使用的。&lt;/p&gt;\n&lt;p&gt;这时，我们就需要去修改Hyper-V服务保留的端口&lt;/p&gt;\n&lt;h3 id=\&#34;解决办法\&#34;&gt;解决办法：&lt;/h3&gt;\n&lt;p&gt;重新设置一些【TCP动态端口范围】，让Hyper-V服务只在我们指定的端口范围内进行保留。&lt;br&gt;\n使用命令 &lt;code&gt;netsh int ipv4 show dynamicport tcp&lt;/code&gt; 可以查看目前【TCP 动态端口】的范围&lt;/p&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;1\&#34;&gt;&lt;img src=\&#34;https://manguanghui.github.io/post-images/1665384718738.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;p&gt;执行下面的命令，可以根据自己需求来设置端口范围&lt;/p&gt;\n&lt;p&gt;&lt;code&gt;netsh int ipv4 set dynamic tcp start=49152 num=16384&lt;/code&gt;&lt;br&gt;\n&lt;code&gt;netsh int ipv6 set dynamic tcp start=49152 num=16384&lt;/code&gt;&lt;/p&gt;\n&lt;p&gt;执行完成之后，重启电脑&lt;/p&gt;\n&lt;p&gt;之后，Hyper-V服务就只会在我们设置好的端口范围内进行端口保留。&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;hyper-v-duan-kou-bao-liu&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;Hyper-V端口保留&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2022-10-10 14:47:54&#34;,&#34;dateFormat&#34;:&#34;2022-10-10&#34;,&#34;feature&#34;:&#34;https://manguanghui.github.io/post-images/hyper-v-duan-kou-bao-liu.jpg&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/hyper-v-duan-kou-bao-liu/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:55000,&#34;words&#34;:241,&#34;minutes&#34;:1},&#34;description&#34;:&#34;原因\n软件无法启动，执行 netstat -aon|findstr &amp;quot;被占用端口号&amp;quot; 后发现端口并没有被占用\n这是因为一些软件的原因，可能会导致Hyper-V服务将某些端口保留，经过Hyper-V服务保留的端口是无法让软...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%8E%9F%E5%9B%A0\&#34;&gt;原因&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95\&#34;&gt;解决办法：&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;h3 id=\&#34;安装所需依赖\&#34;&gt;安装所需依赖&lt;/h3&gt;\n&lt;p&gt;1、在线安装&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-shell\&#34;&gt;yum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;2、离线安装&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-shell\&#34;&gt;yumdownler --resolve --destdir=pwd gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;获取依赖的 rpm 文件，此时都放到当前目录下&lt;/p&gt;\n&lt;p&gt;因为可能不知道依赖包安装顺序，所以使用以下命令来进行安装&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-shell\&#34;&gt;rpm -Uvh *.rpm --nodeps --force # 安装当前目录下的所有rpm文件，要在root用户下\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;安装erlang\&#34;&gt;安装erlang&lt;/h3&gt;\n&lt;p&gt;– erlang download url &lt;a href=\&#34;https://erlang.org/download/\&#34;&gt; https://erlang.org/download/ &lt;/a&gt; | &lt;a href=\&#34;https://github.com/erlang/otp/releases\&#34;&gt; https://github.com/erlang/otp/releases &lt;/a&gt;&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-shell\&#34;&gt;wget https://erlang.org/download/otp_src_24.0.tar.gz\ntar xf otp_src_24.0.tar.gz\n\n# --prefix 跟erlang编译目录\n./configure --prefix=erlang/otc_src_24.0 --with-ssl --enable-hipe --enable-threads --enable-smp-support --enable-kernel-poll --without-javac\n# 编译\nmake &amp;amp;&amp;amp; make install\n# 配置环境变量\nvim /etc/profile\n# 添加如下代码\nexport PATH=PATH:&#39;erlang编译之后的目录&#39;:$PATH\nsource /etc/profile # 更新配置\nerl -version # 查看erlang版本\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;安装rabbitmq\&#34;&gt;安装RabbitMQ&lt;/h3&gt;\n&lt;p&gt;– rabbitmq download url &lt;a href=\&#34;https://github.com/rabbitmq/rabbitmq-server/releases\&#34;&gt;https://github.com/rabbitmq/rabbitmq-server/releases&lt;/a&gt;&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-shell\&#34;&gt;wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.7/rabbitmq-server-generic-unix-3.9.7.tar.xz\ntar -xvf rabbitmq-server-generic-unix-3.9.7.tar.xz -C /root/data/\nvim /etc/profile\nexport PATH=$PATH:/root/data/rabbitmq_server-3.9.7/sbin\nsource /etc/profile\n\ncd /root/data/rabbitmq_server-3.9.7/sbin\n# console\n./rabbitmq-server start\n# 后台启动\n./rabbitmq-server -detached\n# 关闭\n./rabbitmq-server stop\n# 启动Web管理插件\n./rabbitmq-plugins enable rabbitmq_management\n\n# 启动节点\n./rabbitmqctl start_app\n\n# 添加账号密码和权限\n./rabbitmqctl add_user admin admin\n./rabbitmqctl set_user_tags admin administrator\n./rabbitmqctl add_vhost admin\n./rabbitmqctl set_permissions -p admin admin &amp;quot;.&amp;quot; &amp;quot;.&amp;quot; &amp;quot;.*&amp;quot;\n\n# 开启防火墙端口\n# 默认服务端口\nfirewall-cmd --zone=public --add-port=5672/tcp --permanent\n\n# 默认管理界面端口\nfirewall-cmd --zone=public --add-port=15672/tcp --permanent\n\n# 重启防火墙\nfirewall-cmd --reload\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;访问\&#34;&gt;访问&lt;/h3&gt;\n&lt;p&gt;ip:15672&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;centos-an-zhuang-rabbitmq&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;Centos安装RabbitMQ&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;centos&#34;,&#34;slug&#34;:&#34;k2qfeMnB0&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/k2qfeMnB0/&#34;}],&#34;date&#34;:&#34;2022-10-08 16:39:51&#34;,&#34;dateFormat&#34;:&#34;2022-10-08&#34;,&#34;feature&#34;:&#34;https://manguanghui.github.io/post-images/centos-an-zhuang-rabbitmq.jpg&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/centos-an-zhuang-rabbitmq/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;3 min read&#34;,&#34;time&#34;:121000,&#34;words&#34;:402,&#34;minutes&#34;:3},&#34;description&#34;:&#34;安装所需依赖\n1、在线安装\nyum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel\n\n2、离线安装\nyumdownler --resolve --destd...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96\&#34;&gt;安装所需依赖&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%AE%89%E8%A3%85erlang\&#34;&gt;安装erlang&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%AE%89%E8%A3%85rabbitmq\&#34;&gt;安装RabbitMQ&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%AE%BF%E9%97%AE\&#34;&gt;访问&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;又名摩尔算法&lt;/p&gt;\n&lt;h1 id=\&#34;算法介绍\&#34;&gt;算法介绍&lt;/h1&gt;\n&lt;h2 id=\&#34;基本思想\&#34;&gt;基本思想&lt;/h2&gt;\n&lt;p&gt;在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;如果数组为空，则数组中不存在主要元素；&lt;/li&gt;\n&lt;li&gt;如果数组中剩下的元素都相等，则数组中剩下的元素可能为主要元素。&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2 id=\&#34;算法步骤\&#34;&gt;算法步骤&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;\n&lt;p&gt;维护一个候选主要元素candidate和候选主要元素的出现次数count，初始时candidate为任意值，count=0；&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;遍历数组 &lt;em&gt;nums&lt;/em&gt; 中的所有元素，遍历到元素 &lt;em&gt;x&lt;/em&gt; 时，进行如下操作：&lt;/p&gt;\n&lt;p&gt;1）如果 count=0，则将 x 的值赋给 candidate，否则不更新 candidate 的值；&lt;/p&gt;\n&lt;p&gt;2）如果 x=candidate，则将 count 加 1，否则将 count 减 1。&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;遍历结束之后，如果数组 nums 中存在主要元素，则 candidate 即为主要元素，否则 candidate 可能为数组中的任意一个元素。&lt;/p&gt;\n&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;由于不一定存在主要元素，因此需要第二次遍历数组，验证 candidate 是否为主要元素。第二次遍历时，统计 candidate 在数组中的出现次数，如果出现次数大于数组长度的一半，则 candidate 是主要元素，返回 candidate，否则数组中不存在主要元素，返回 −1。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;为什么当数组中存在主要元素时，Boyer-Moore 投票算法可以确保得到主要元素？&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;在 Boyer-Moore 投票算法中，遇到相同的数则将 count 加 1，遇到不同的数则将 count 减 1.根据主要元素的定义，主要元素的出现次数大于其他元素的出现之和，因此在遍历过程中，主要元素和其他元素两两抵消，最后一定剩下至少一个主要元素，此时 candidate 为主要元素，且 count &amp;gt;= 1。&lt;/p&gt;\n&lt;h2 id=\&#34;题目\&#34;&gt;题目&lt;/h2&gt;\n&lt;p&gt;数组中占比超过一半的元素称之为主要元素。给你一个 整数 数组，找出其中的主要元素。若没有，返回 -1 。请设计时间复杂度为 O(N) 、空间复杂度为 O(1) 的解决方案。&lt;/p&gt;\n&lt;p&gt;示例 1：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-text\&#34;&gt;输入：[1,2,5,9,5,9,5,5,5]  \n输出：5  \n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;示例 2：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-text\&#34;&gt;输入：[3,2]  \n输出：-1  \n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;示例 3：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-txt\&#34;&gt;输入：[2,2,1,1,1,2,2]  \n输出：2  \n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;代码如下：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-go\&#34;&gt;// 第一种算法，时间复杂度为O(n),空间复杂度要高一点,为O(n)  \nfunc MajorityElement(nums []int) int {  \n\tm := make(map[int]int)  \n\tlenth := len(nums)  \n\tfor _, v := range nums {  \n\t\tm[v] += 1  \n\t\tif m[v] &amp;gt; lenth/2 {  \n\t\t\treturn v  \n\t\t}  \n\t}  \n\treturn -1  \n}  \n  \n// 第二种算法  \n// 时间复杂度为O(n)。n为数组nums的长度，需要遍历数组两次。  \n// 空间复杂度为O(1)。只需要常数的额外空间。  \nfunc MajorityElementTwo(nums []int) int {  \n\t// 首先维护一个候选主要元素  \n\tcandidate := -1  \n\t// 记录候选元素的个数  \n\tcount := 0  \n\t// 如果count=0,此时没有候选主要元素,将此时遍历到的元素赋给candidate作为候选主要元素  \n\tfor _, v := range nums {  \n\t\tif count == 0 {  \n\t\t\tcandidate = v  \n\t\t}  \n\t\t// 如果遍历到的元素和候选主要元素相等，则数量加一,反之数量减一  \n\t\tif v == candidate {  \n\t\t\tcount++  \n\t\t} else {  \n\t\t\tcount--  \n\t\t}  \n\t}  \n\t// 进行第二次遍历，确定第一次遍历得到的candidate是否时主要元素  \n\tcount = 0  \n\tfor _, v := range nums {  \n\t\tif v == candidate {  \n\t\t\tcount++  \n\t\t}  \n\t}  \n\tif count*2 &amp;gt; len(nums) {  \n\t\treturn candidate  \n\t}  \n\treturn -1  \n}\n&lt;/code&gt;&lt;/pre&gt;\n&#34;,&#34;fileName&#34;:&#34;boyer-moore-tou-piao-suan-fa&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;Boyer-Moore投票算法&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;go&#34;,&#34;slug&#34;:&#34;S34G0DvPG&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/S34G0DvPG/&#34;},{&#34;index&#34;:0,&#34;name&#34;:&#34;算法&#34;,&#34;slug&#34;:&#34;leetcode&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://manguanghui.github.io/tag/leetcode/&#34;}],&#34;date&#34;:&#34;2022-10-08 16:32:56&#34;,&#34;dateFormat&#34;:&#34;2022-10-08&#34;,&#34;feature&#34;:&#34;https://manguanghui.github.io/post-images/boyer-moore-tou-piao-suan-fa.jpg&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/boyer-moore-tou-piao-suan-fa/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;4 min read&#34;,&#34;time&#34;:197000,&#34;words&#34;:847,&#34;minutes&#34;:4},&#34;description&#34;:&#34;又名摩尔算法\n算法介绍\n基本思想\n在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。\n\n如果数组为空，则数组中不存在主要元素；\n如果数组中剩下的元素都相等，则数组中剩下的元素可能为...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D\&#34;&gt;算法介绍&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3\&#34;&gt;基本思想&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4\&#34;&gt;算法步骤&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%A2%98%E7%9B%AE\&#34;&gt;题目&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;blockquote&gt;\n&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\&#34;关于本站\&#34;&gt;🏠 关于本站&lt;/h2&gt;\n&lt;p&gt;主要用来记录一些平时遇到的问题和难点的解决方法&lt;/p&gt;\n&lt;h2 id=\&#34;博主是谁\&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;\n&lt;p&gt;一个浪迹于编程圈子的菜鸟&lt;/p&gt;\n&lt;h2 id=\&#34;兴趣爱好\&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;\n&lt;p&gt;游戏、音乐&lt;/p&gt;\n&lt;h2 id=\&#34;联系我呀\&#34;&gt;📬 联系我呀&lt;/h2&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2019-01-25 19:09:48&#34;,&#34;dateFormat&#34;:&#34;2019-01-25&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://manguanghui.github.io/post/about/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:14000,&#34;words&#34;:70,&#34;minutes&#34;:1},&#34;description&#34;:&#34;\n欢迎来到我的小站呀，很高兴遇见你！🤝\n\n🏠 关于本站\n主要用来记录一些平时遇到的问题和难点的解决方法\n👨‍💻 博主是谁\n一个浪迹于编程圈子的菜鸟\n⛹ 兴趣爱好\n游戏、音乐\n📬 联系我呀\n...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99\&#34;&gt;🏠 关于本站&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81\&#34;&gt;👨‍💻 博主是谁&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD\&#34;&gt;⛹ 兴趣爱好&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80\&#34;&gt;📬 联系我呀&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;}]";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script> -->
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
+
+
+<script src=" /media/js/cool.js"></script>
+
+
+</html>
