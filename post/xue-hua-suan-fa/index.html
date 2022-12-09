@@ -8,7 +8,7 @@
 <meta name="keywords" content="MoNian的技术博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#212529">
-<title>检测U盘 | MoNian&#39;s Blog</title>
+<title>雪花算法 | MoNian&#39;s Blog</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1670569122156">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
@@ -29,8 +29,8 @@
 
 
 
-    <meta name="description" content="检测U盘" />
-    <meta name="keywords" content="tools,go" />
+    <meta name="description" content="雪花算法" />
+    <meta name="keywords" content="数据库,go,算法" />
     <!--网站加载进度条开始-->
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -325,13 +325,13 @@
                 <div class="post-body">
                   
                     
-                      <img src="/post-images/jian-ce-u-pan.jpg" />
+                      <img src="/post-images/xue-hua-suan-fa.jpg" />
                       
                 </div>
                 <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://manguanghui.github.io/post/jian-ce-u-pan/">
-      检测U盘
+    <a class="post-title-link" href="https://manguanghui.github.io/post/xue-hua-suan-fa/">
+      雪花算法
     </a>
   </h1>
   <div class="post-meta">
@@ -339,7 +339,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2022-10-14</span>
+      <span>2022-12-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -348,14 +348,20 @@
       <span class="pc-show">分类于</span>
       
       
-      <a href="https://manguanghui.github.io/tag/9NHbeb4m1/">
-        <span>tools</span>
+      <a href="https://manguanghui.github.io/tag/iXLc_quXM/">
+        <span>数据库</span>
       </a>、
       
       
       
       <a href="https://manguanghui.github.io/tag/S34G0DvPG/">
         <span>go</span>
+      </a>、
+      
+      
+      
+      <a href="https://manguanghui.github.io/tag/leetcode/">
+        <span>算法</span>
       </a>
       
       
@@ -364,17 +370,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>285<span class="pc-show">字数</span></span>
+      <span>919<span class="pc-show">字数</span></span>
     </span>
     
     
     
-    <span id="/post/jian-ce-u-pan/" data-flag-title="检测U盘" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/xue-hua-suan-fa/" data-flag-title="雪花算法" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span>浏览量：<span class="leancloud-visitors-count"></span></span>
@@ -383,52 +389,164 @@
   </div>
 </header>
                   <div class="post-body next-md-body" id="post_body">
-                    <h3 id="根据注册表去检测">根据注册表去检测</h3>
-<p>相关代码如下</p>
-<pre><code class="language-go">// 获取系统中所有盘符
-func GetSystemDisks() []string {
-	// 获取系统dll
-	kernel32 := syscall.MustLoadDLL(&quot;kernel32.dll&quot;)
-	// 获取dll中函数
-	GetLogicalDrives := kernel32.MustFindProc(&quot;GetLogicalDrives&quot;)
-	// 调用dll中函数
-	n, _, _ := GetLogicalDrives.Call()
-	s := strconv.FormatInt(int64(n), 2)
-	var allDrives = []string{&quot;A:&quot;, &quot;B:&quot;, &quot;C:&quot;, &quot;D:&quot;, &quot;E:&quot;, &quot;F:&quot;, &quot;G:&quot;, &quot;H:&quot;,
-		&quot;I:&quot;, &quot;J:&quot;, &quot;K:&quot;, &quot;L:&quot;, &quot;M:&quot;, &quot;N:&quot;, &quot;O:&quot;, &quot;P：&quot;, &quot;Q：&quot;, &quot;R：&quot;, &quot;S：&quot;, &quot;T：&quot;,
-		&quot;U：&quot;, &quot;V：&quot;, &quot;W：&quot;, &quot;X：&quot;, &quot;Y：&quot;, &quot;Z：&quot;}
-	temp := allDrives[0:len(s)]
-	var d []string
-	for i, v := range s {
-		if v == 49 {
-			l := len(s) - i - 1
-			d = append(d, temp[l])
-		}
-	}
-	var drives []string
-	for i, v := range d {
-		drives = append(drives[i:], append([]string{v}, drives[:i]...)...)
-	}
-	return drives
+                    <h1 id="简介">简介</h1>
+<blockquote>
+<p>Twitter 的 SnowFlake 是一种经典分布式 ID 生成算法。ID 是一个 64 位的长整型。<br>
+<img src="https://manguanghui.github.io/post-images/1670555415556.jpg" alt="" loading="lazy"></p>
+</blockquote>
+<p>● <code>1位</code>，不用。二进制中最高位为 1 的都是负数，但是我们生成的 id 一般都使用整数，所以这个最高位固定是 0<br>
+● <code>41位</code>，用来记录时间戳（毫秒）。</p>
+<p>41 位可以表示2^{41} −1 个数字，<br>
+如果只用来表示正整数（计算机中正数包含 0），可以表示的数值范围是：0 至 2^{41} −1，减 1 是因为<br>
+可表示的数值范围是从 0 开始算的，而不是 1。<br>
+也就是说 41 位可以表示 241−1 个毫秒的值，<br>
+转化成单位年则是 (2^{41} −1)/(1000∗60∗60∗24∗365)=69 年</p>
+<p><code>10位</code>，用来记录工作机器 id。</p>
+<p>可以部署在2^{10} =1024 个节点，包括 5 位 datacenterId 和 5 位 workerId<br>
+5 位（bit）可以表示的最大正整数是2^5−1=31，即可以用 0、1、2、3、….31 这 32 个数字，<br>
+来表示不同的 datecenterId 或 workerId</p>
+<p><code>12位</code>，序列号，用来记录同毫秒内产生的不同 id。</p>
+<p>12 位（bit）可以表示的最大正整数是 2^{12} −1=4095，<br>
+即可以用 0、1、2、3、….4094 这 4095 个数字，<br>
+来表示同一机器同一时间截（毫秒) 内产生的 4095 个 ID 序号</p>
+<h1 id="代码实现">代码实现</h1>
+<pre><code class="language-go">// Fetch prints the content found at a URL.
+package main
+
+import (
+    &quot;fmt&quot;
+    &quot;log&quot;
+    &quot;sync&quot;
+    &quot;time&quot;
+)
+const (
+    workerIdBits int64  = 5
+    datacenterIdBits int64 = 5
+    sequenceBits int64 = 12
+
+    maxWorkerId int64 = -1 ^ (-1 &lt;&lt; uint64(workerIdBits))
+    maxDatacenterId int64 = -1 ^ (-1 &lt;&lt; uint64(datacenterIdBits))
+    maxSequence int64 = -1 ^ (-1 &lt;&lt; uint64(sequenceBits))
+
+    timeLeft uint8 = 22
+    dataLeft uint8 = 17
+    workLeft uint8 = 12
+
+    twepoch int64 = 1525705533000
+)
+
+type  worker struct {
+    mu           sync.Mutex
+    laststamp    int64
+    workerid     int64
+    datacenterid int64
+    sequence     int64
 }
 
-// 获取插入的U盘盘符
-func GetUDisk() []string {
-	//查询注册表，判断是否插入U盘
-	k, err := registry.OpenKey(registry.LOCAL_MACHINE, `SYSTEM\CurrentControlSet\Services\USBSTOR\Enum`, registry.QUERY_VALUE)
-	if err != nil {
-		fmt.Println(&quot;Not have U-Disk&quot;)
-		return nil
-	}
-	defer k.Close()
-	// 获取注册表中值，得到插入了几个U盘
-	count, _, err := k.GetIntegerValue(&quot;Count&quot;)
-	// 获取全部盘符
-	disks := GetSystemDisks()
+func(w *worker) getCurrentTime() int64 {
+    return time.Now().UnixNano() / 1e6
+}
+//var i int = 1
+func(w *worker) nextId() int64 {
+    w.mu.Lock()
+    defer w.mu.Unlock()
+    timestamp := w.getCurrentTime()
+    if timestamp &lt; w.laststamp {
+        log.Fatal(&quot;can not generate id&quot;)
+    }
+    if w.laststamp == timestamp {
+    // 这其实和 &lt;==&gt;
+        // w.sequence++
+        // if w.sequence++ &gt; maxSequence  等价
+        w.sequence = (w.sequence + 1) &amp; maxSequence
+        if w.sequence == 0 {
+        // 之前使用 if, 只是没想到 GO 可以在一毫秒以内能生成到最大的 Sequence, 那样就会导致很多重复的
+            // 这个地方使用 for 来等待下一毫秒
+            for timestamp &lt;= w.laststamp {
+                //i++
+                //fmt.Println(i)
+                timestamp = w.getCurrentTime()
+            }
+        }
+    } else {
+        w.sequence = 0
+    }
+    w.laststamp = timestamp
 
-	return disks[len(disks)-int(count):]
+    return ((timestamp - twepoch) &lt;&lt; timeLeft) | (w.datacenterid &lt;&lt; dataLeft)  | (w.workerid &lt;&lt; workLeft) | w.sequence
+}
+func (w *worker) tilNextMillis() int64 {
+    timestamp := w.getCurrentTime()
+    if (timestamp &lt;= w.laststamp) {
+        timestamp = w.getCurrentTime()
+    }
+    return timestamp
+}
+
+func main() {
+    w := new(worker)
+    // 上一次时间
+    w.laststamp = -1
+    w.workerid  = 10
+    w.datacenterid = 12
+    w.sequence = 14
+
+    i := 0
+    r := make([]int64, 0)
+    for {
+        id := w.nextId()
+        r = append(r, id)
+        i++
+        if  i &gt; 10000000 {
+            break
+        }
+    }
+    j := 0
+    for _,v := range r {
+        if v &gt; 1 {}
+        j++
+    }
+    fmt.Println(j)
+    fmt.Println(len(unique(r)))
+    fmt.Println(w)
+
+}
+func unique(m[]int64) []int64 {
+    s := make([]int64, 0)
+    smap := make(map[int64]int64)
+    for _, value := range m {
+        //计算map长度
+        length := len(smap)
+        smap[value] = 1
+        //比较map长度, 如果map长度不相等， 说明key不存在
+        if len(smap) != length {
+            s = append(s, value)
+        }
+    }
+
+    return  s
+
 }
 </code></pre>
+<h2 id="代码解释">代码解释</h2>
+<pre><code class="language-go">maxSequence int64 = -1 ^ (-1 &lt;&lt; uint64(sequenceBits))
+</code></pre>
+<h3 id="负数的二进制">负数的二进制</h3>
+<p>这设计两个名词，反码和补码。来看一下整型 1 的二进制原码。</p>
+<p><code>00000000 00000000 00000000 00000001</code></p>
+<p>反码 （二进制取反）</p>
+<p><code>11111111 11111111 11111111 11111110</code></p>
+<p>补码 (反码 + 1)</p>
+<p><code>11111111 11111111 11111111 11111111</code></p>
+<p>再看这段代码，转成二进制:</p>
+<p><code>11111111 11111111 11111111 11111111 ^ (11111111 11111111 11111111 11111111 &lt;&lt; 12)</code><br>
+<code>11111111 11111111 11111111 11111111 ^ 11111111 11111111 11110000 00000000</code><br>
+<code>00000000 00000000 00001111 11111111 =&gt; 4095</code></p>
+<p>整个过程大概就是这样的</p>
+<p>还有就是 按位或 (|) 和 按位异或 (^) 的区别</p>
+<p><code>0011 | 1011 =&gt; 1011 （按照征程 || 来想就可以了，1 true 0 false）</code><br>
+<code>0011 ^ 1011 =&gt; 1000 (位相同为零，位不同为一)</code></p>
+<p>最后从结果来看，生成 1000W，也没有重复的。 而且速度也很快，个人感知大概在两秒左右。</p>
 
                       <div>
                         <br />
@@ -446,7 +564,7 @@ func GetUDisk() []string {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://manguanghui.github.io/post/jian-ce-u-pan/" title="检测U盘">https://manguanghui.github.io/post/jian-ce-u-pan/</a>
+      <a href="https://manguanghui.github.io/post/xue-hua-suan-fa/" title="雪花算法">https://manguanghui.github.io/post/xue-hua-suan-fa/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -455,23 +573,21 @@ func GetUDisk() []string {
   </ul>
   <div class="tags">
     
-      <a href="https://manguanghui.github.io/tag/9NHbeb4m1/"># tools</a>
+      <a href="https://manguanghui.github.io/tag/iXLc_quXM/"># 数据库</a>
     
       <a href="https://manguanghui.github.io/tag/S34G0DvPG/"># go</a>
+    
+      <a href="https://manguanghui.github.io/tag/leetcode/"># 算法</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="雪花算法" href="https://manguanghui.github.io/post/xue-hua-suan-fa/">雪花算法</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="雪花算法" href="https://manguanghui.github.io/post/xue-hua-suan-fa/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="go 统计目录大小" href="https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/">go 统计目录大小</a>
-        <a class="nav-mobile-next" title="go 统计目录大小" href="https://manguanghui.github.io/post/go-tong-ji-mu-lu-da-xiao/">下一篇</a>
+        <a class="nav-pc-next" title="检测U盘" href="https://manguanghui.github.io/post/jian-ce-u-pan/">检测U盘</a>
+        <a class="nav-mobile-next" title="检测U盘" href="https://manguanghui.github.io/post/jian-ce-u-pan/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://manguanghui.github.io</id>
     <title>MoNian&apos;s Blog</title>
-    <updated>2022-10-21T02:10:58.425Z</updated>
+    <updated>2022-12-09T06:58:45.531Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://manguanghui.github.io"/>
     <link rel="self" href="https://manguanghui.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://manguanghui.github.io/images/avatar.png</logo>
     <icon>https://manguanghui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, MoNian&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[雪花算法]]></title>
+        <id>https://manguanghui.github.io/post/xue-hua-suan-fa/</id>
+        <link href="https://manguanghui.github.io/post/xue-hua-suan-fa/">
+        </link>
+        <updated>2022-12-09T03:08:23.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[检测U盘]]></title>
         <id>https://manguanghui.github.io/post/jian-ce-u-pan/</id>
